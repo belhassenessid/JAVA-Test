@@ -35,19 +35,20 @@ public class EnseignantTest extends TestCase {
 	
 	// TEST de suppression
 	Python.supprimerEnseignant(tous_les_enseignants[1]);
-	assertEquals(Python.NombreEnseignants(),1); //si la suppression est réussie, le nombre de profs de Python doit être 2-1==1
+	//si la suppression est réussie, le nombre de profs de Python doit être 2-1==1
+	assertEquals(Python.NombreEnseignants(),1);
 	
-	// Test update && Saisie de notes
-	// tester que nous pouvons modifier les profs en leur ajoutant +100 dt dans le salaire et en inversant les matieres
-	Python.updateEnseignantAt("Maths",2189,  0);
-	Maths.updateEnseignantAt("Python",1700,  0);
+	// Test update && Salaire
+	// tester que nous pouvons modifier les profs en leur ajoutant +100 dt dans le salaire et en modifiant les matieres
+	Python.updateEnseignantAt("Python-OOP",2189,  0);
+	Maths.updateEnseignantAt("Maths-App",1700,  0);
 	
-	System.out.print(tous_les_enseignants[0].toString());
 	assertEquals(Python.getEnseignantAt(0).getSalaire() , 2189.0);
 	assertEquals(Maths.getEnseignantAt(0).getSalaire() , 1700.0);
 	
 	// Test Affichage de salaire, matieres et quelques autres options -id, non et prenom
-	assertEquals(Python.getEnseignantAt(0).toString() , "ID:1, Salim Abidi prof de Maths salaire=2189.0");
+	assertEquals(Python.getEnseignantAt(0).toString() , "ID:1, Salim Abidi prof de Python-OOP salaire=2189.0");
+	System.out.print(Maths.getEnseignantAt(0).toString());
 	
 	
 	}
