@@ -8,8 +8,8 @@ import junit.framework.*;
 public class EtudiantTest extends TestCase {
 	
 	Etudiant tous_les_etudiants[] = new Etudiant[3]; //liste de tous les etudiants
-	ListeEtudiants CS =new ListeEtudiants(); //liste des étudiants du filière Python
-	ListeEtudiants IRS =new ListeEtudiants(); //liste des étudiants du filière Maths
+	ListeEtudiants CS =new ListeEtudiants(); //liste des étudiants du filière CS
+	ListeEtudiants IRS =new ListeEtudiants(); //liste des étudiants du filière IRS
 	
 	
 	public void test() throws Exception {	
